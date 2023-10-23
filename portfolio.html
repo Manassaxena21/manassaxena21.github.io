@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Portfolio</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='portfolio.css'>
+    <script src='script.js'></script>
+    <script src="https://kit.fontawesome.com/e3a11b5030.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header" id="home">
+        <div class="navbar">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul class ="mobmenu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#project">Project</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" style="color: #ffffff;" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" style="color: #ffffff;margin-right: 2%;" onclick="openmenu()"></i>
+            </nav>
+        </div>
+    </header>
+    <section class="info" id="info">
+        <div class="info-content">
+            <h1>I'm Manas Saxena</h1>
+        </div>
+        <ul class="animated-text">
+            <li><span>Full stack Developer</span></li>
+            <li><span>Front End Developer</span></li>
+            <li><span>Back End Developer</span></li>
+            <li><span>Software Engineer</span></li>
+            <li><span>Solutions Engineer</span></li>
+        </ul>
+        <a download class="cv-button" href="images/Full Stack Developer Resume (5).pdf">Download Resume</a>
+    </section>
+    <div class="hero">
+        <img src="images/Hero-1.png" class="hero-img">
+    </div>
+    <!-------------about------------->
+    <section class="about" id="about">
+        <div class="about-section">
+            <div class="row">
+                <div class="about-col-1">
+                    <img class="about-img" src="images/about.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p style="padding: 2% 0; font-weight:bold;">A full-stack developer with two years of professional experience specializing in web development,
+                        project management, Agile methodology, and quality assurance testing. Adept at coordinating
+                        effectively with development teams, clients, and non-technical stakeholders to execute complex
+                        web development projects.</p>
+                        <div class="tab-title">
+                            <p class="tab-links active-link" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                            <p class="tab-links" onclick="opentab('hobbies')">Hobbies</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="experience">
+                            <p style="font-weight: bold; color: rgb(15, 15, 1);">Works at IBS software Services<br> 10/2021-present</p>
+                            <p style="font-weight: bold; color: rgb(22, 22, 1);">Client - Egencia</p>
+                            <ul>
+                                <li><span>Collaborate with other teams and managers for
+                                    <br> ideating software solutions</span></li>
+                                    <li><span>Design, develop and maintain front-end and back-end</span></li>    
+                                <li><span>Designing server side and client side architecture</span></li>
+                                <li><span>Extraction and management of databases</span></li>
+                                <li><span>Conduct scrum activties according to agile software methodology</span></li>
+                                <li><span>Testing and fixing bugs and other issues</span></li>
+                                <li><span>Provide live-site support on cyclic basis</span></li>
+                                <li><span>Troubleshooting, debugging and maintaining software</span></li>
+                            </ul>
+                        </div>    
+                            <div class="tab-contents" id="education">
+                                <table>
+                                    <tr>
+                                        <td>Qualification</td>
+                                        <td>Institute</td>
+                                        <td>Year</td>
+                                        <td>Grade</td>
+                                    </tr>
+                                    <tr>
+                                        <td>B.tech</td>
+                                        <td>Srm University Chennai</td>
+                                        <td>2020</td>
+                                        <td>8</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12th</td>
+                                        <td>Bal Bharati Public School</td>
+                                        <td>2015</td>
+                                        <td>72.67%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10th</td>
+                                        <td>Bal Bharati Public School</td>
+                                        <td>2013</td>
+                                        <td>8.6</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        <div class="tab-contents" id="hobbies">
+                            <ul>
+                                <li><span>Cycling</span></li>
+                                <li><span>Script Writing</span></li>
+                                <li><span>Poetry</span></li>
+                                <li><span>Travelling</span></li>
+                                <li><span>Cooking</span></li>
+                                <li><span>Performing standup gigs</span></li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   <!-------------skills------------->
+   <section class="skills" id="skills">
+    <h1 class="skill-title">Skills</h1>
+    <div class="skill-section">
+        <div class="skill-tab-title" style="padding: 30px 30px;">
+            <p class="skill-tab-links skill-active-link" onclick="openskilltab('front-end')">Front End Skills</p>
+            <p class="skill-tab-links"onclick="openskilltab('back-end')">Back End Skills</p>
+            <p class="skill-tab-links"onclick="openskilltab('database')">Database Skills</p>
+            <p class="skill-tab-links"onclick="openskilltab('other')">Other Skills</p>
+            <p class="skill-tab-links"onclick="openskilltab('interpersonal')">Interpersonal Skills</p>
+        </div>
+        <div class="skill-tab-contents skill-active-tab" id="front-end">
+            <h1 style="text-align: center;">Front-end Skills</h1>
+
+            <li><h3>Html</h3>
+                <span class="bar"><span class="html"></span></span>
+            </li>
+            <li><h3>CSS</h3>
+                <span class="bar"><span class="css"></span></span>
+            </li>
+            <li><h3>Javascript</h3>
+                <span class="bar"><span class="javascript"></span></span>
+            </li>
+            <li><h3>Angular Js</h3>
+                <span class="bar"><span class="angular"></span></span>
+            </li>
+            <li><h3>ReactJs</h3>
+                <span class="bar"><span class="react"></span></span>
+            </li>
+        </div>
+        <div class="skill-tab-contents" id="back-end">
+            <h1 style="text-align: center;">Back-end Skills</h1>
+
+            <li><h3>Java</h3>
+                <span class="bar"><span class="java"></span></span>
+            </li>
+            <li><h3>Spring-Boot</h3>
+                <span class="bar"><span class="spring-boot"></span></span>
+            </li>
+            <li><h3>MVC</h3>
+                <span class="bar"><span class="mvc"></span></span>
+            </li>
+            <li><h3>Maven</h3>
+                <span class="bar"><span class="maven"></span></span>
+            </li>
+            <li><h3>C/C++</h3>
+                <span class="bar"><span class="c"></span></span>
+            </li>
+            <li><h3>Python</h3>
+                <span class="bar"><span class="python"></span></span>
+            </li>
+        </div>
+        <div class="skill-tab-contents" id="database">
+            <h1 style="text-align: center;">Database</h1>
+            <li><h3>Sql</h3>
+                <span class="bar"><span class="sql"></span></span>
+            </li>
+            <li><h3>Mongo</h3>
+                <span class="bar"><span class="mongo"></span></span>
+            </li>
+            <li><h3>Snowflake</h3>
+                <span class="bar"><span class="snowflake"></span></span>
+            </li>
+        </div>
+        <div class="skill-tab-contents" id="other">
+            <h1 style="text-align: center;">Other Skills</h1>
+            <li><h3>Jenkins CI/CD</h3>
+                <span class="bar"><span class="jenkins"></span></span>
+            </li>
+            <li><h3>GIT</h3>
+                <span class="bar"><span class="git"></span></span>
+            </li>
+            <li><h3>Junit5</h3>
+                <span class="bar"><span class="junit"></span></span>
+            </li>
+            <li><h3>BrowserStack</h3>
+                <span class="bar"><span class="browserstack"></span></span>
+            </li>
+            <li><h3>Scrum</h3>
+                <span class="bar"><span class="scrum"></span></span>
+            </li>
+            <li><h3>Agile tools</h3>
+                <span class="bar"><span class="agile"></span></span>
+            </li>
+            <li><h3>Kibana</h3>
+                <span class="bar"><span class="kibana"></span></span>
+            </li>
+            <li><h3>AWS</h3>
+                <span class="bar"><span class="aws"></span></span>
+            </li>
+            <li><h3>Datadog</h3>
+                <span class="bar"><span class="datadog"></span></span>
+            </li>   
+        </div>
+        <div class="skill-tab-contents" id="interpersonal">
+            <h1 style="text-align: center;">Interpersonal Skills</h1>
+            <li><h3>Communication</h3>
+                <span class="bar"><span class="communication"></span></span>
+            </li>
+            <li><h3>Leadership</h3>
+                <span class="bar"><span class="leadership"></span></span>
+            </li>
+            <li><h3>Time Management</h3>
+                <span class="bar"><span class="timemanagement"></span></span>
+            </li>
+            <li><h3>Fast learning</h3>
+                <span class="bar"><span class="fastlearning"></span></span>
+            </li>
+            <li><h3>Collaborative</h3>
+                <span class="bar"><span class="collaborative"></span></span>
+            </li>
+            <li><h3>Analytical</h3>
+                <span class="bar"><span class="analytical"></span></span>
+            </li>
+        </div>
+    </div>
+   </section>
+
+   <!-------------Projects------------->
+   <section class="projects" id="project">
+    <h1 class="project-title">Projects</h1>
+    <div class="project-list">
+            <div class="work">
+                <img src="images/music.jpg">
+                <div class="layer">
+                    <h3>Java Music App</h3>
+                    <p>Musical application that 
+                        plays songs and podcast</p>
+                        <a href="https://github.com/Manassaxena21/JavaMUSIXAPP"><i class="fa-solid fa-arrow-up-right-from-square fa-beat" style="color: #ffffff;"></i></a>    
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/todo.jpeg">
+                <div class="layer">
+                    <h3>To-do</h3>
+                    <p>To do web application </p>
+                    <a href="https://github.com/Manassaxena21/BACK_END_-TODO-"><i class="fa-solid fa-arrow-up-right-from-square fa-beat" style="color: #ffffff;"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/widget.png">
+                <div class="layer">
+                    <h3>Widget</h3>
+                    <p>Taboola widget look alike</p>
+                    <a href="https://github.com/Manassaxena21/taboola-widget"><i class="fa-solid fa-arrow-up-right-from-square fa-beat" style="color: #ffffff;"></i></a>
+                </div>
+            </div>
+    </div>
+    <div id="see-more">
+    </div>
+    <a href="#see-more" class="btn" id="see-more-button">See More</a>
+   </section>
+   <!--------------contact----------------->
+   <section class="contact" id="contact">
+    <div class="contact-section">
+        <div class="rowContact">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope" style="color: #fbff00;"></i>saxena.manas21@gmail.com</p>
+                <p><i class="fa-solid fa-phone" style="color: #fbff00;"></i>9910212713</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/manas-saxena-762592189/"><i class="fa-brands fa-linkedin" style="color: #fafe06;"></i></a>
+                    <a href="https://github.com/Manassaxena21"><i class="fa-brands fa-github" style="color: #fbff0a;"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+                <span id ="msg"></span>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="copyright">
+    <p>Copyright © Manas.</p>
+
+</footer>
+</body>
+
+</html>

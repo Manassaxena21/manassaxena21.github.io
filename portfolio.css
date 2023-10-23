@@ -1,0 +1,841 @@
+body
+{
+    background-color: rgb(216, 219, 177);
+    height: 100%;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.logo
+{
+    width: 100px;
+    cursor: pointer;
+    margin-left: 5%;
+}
+
+.navbar
+{
+    height: 20vh;
+    width: 100%;
+    font-family: calibri;
+    font-weight: bold;
+    font-size: medium;
+    border-radius: 8em;
+}
+
+nav
+{
+    width: 100%;
+    margin: auto;
+    padding: 5px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    height: 10vh;
+    position: fixed;
+    z-index: 100;
+}
+
+nav ul
+{
+    width:auto;
+    margin-right: 5%;
+}
+
+nav ul li
+{
+    list-style: none;
+    display: inline-block;
+    margin: 30px 20px;
+}
+
+nav ul li a
+{
+    text-decoration: solid;
+    color: white;
+}
+
+nav ul li a:hover
+{
+    color: rgb(221, 218, 30);
+}
+.info-content
+{
+    display: flex;
+    margin-left: 10%;
+    margin-top: 10%;
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.animated-text
+{
+    margin-left: 10%;
+    overflow: hidden;
+    line-height: 40px;
+    height: 40px;
+}
+
+
+.animated-text li
+{
+    position: relative;
+    top: 0;
+    list-style: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:rgb(243, 227, 6);
+    font-weight: bolder;
+    font-size: 30px;
+    text-shadow: 2px 2px black;
+    animation: slide 25s steps(5) infinite;
+
+}
+
+@keyframes slide
+{
+    100%{
+        top: -200px;
+    }
+}
+.animated-text li span
+{
+    position: relative;
+    margin: 5px 0;
+    line-height: 10px;
+}
+
+.animated-text li span::after
+{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 115%;
+    width: 100%;
+    background:  rgb(216, 219, 177);
+    border-left: 3px solid yellow;
+    animation: typing 5s steps(28) infinite;
+}
+
+@keyframes typing{
+    40%, 60%{
+        left: calc(100% + 30px);
+    }
+
+    100%{
+        left: 100%;
+        margin: 0 -35px 35px;
+    }
+}
+
+.cv-button
+{
+    position:absolute;
+    padding: 10px 20px;
+    margin-left: 15%;
+    margin-bottom: -5%;
+    margin-top: 2%;
+    cursor: pointer;
+    border-radius: 30px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    border:2px solid white;
+    color: black;
+    font-weight: bolder;
+    background-color: rgb(255, 251, 0);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.cv-button:hover
+{
+    background-color: rgb(218, 226, 109);
+
+}
+
+.hero
+{
+    margin-left: 50%;
+}
+
+.hero-img{
+    width: 50%;
+    margin-left: 30%;
+    margin-top: -30%;
+    border-radius: 20px;
+    
+}
+/*----------------about-------------*/
+
+.about
+{
+    padding: 122px 20px;
+}
+
+.sub-title{
+    font-size: 30px;
+    text-shadow: 3px 3px black;
+    color: yellow;
+}
+
+.about-section
+{
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1
+{
+    flex-basis: 45%;
+}
+
+.about-col-1 img{
+    width: 70%;
+    border-radius: 30px;
+    margin-left: 10%;
+}
+
+.about-col-2{
+    flex-basis: 60%;
+    margin-top: -35%;
+    margin-left: 50%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+
+.tab-title{
+    display: flex;
+    margin-right: 4px;
+}
+.tab-links
+{
+    padding: 0px 0;
+    margin-right: 55px;
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+    display: inline-flex;
+}
+.tab-links::after
+{
+    content: '';
+    width: 0;
+    height: 4px;
+    background: yellow;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after
+{
+    width: 100%;
+}
+.tab-contents{
+    display: none;
+    padding: 12px 2px;
+}
+
+.tab-contents ul li{
+    padding: 2px 2px;
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.tab-contents.active-tab{
+    display: block;
+}
+
+table
+{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 20px;
+    color: white;
+}
+
+td,th{
+    border: 3px solid yellow;
+    padding: 2px;
+}
+tr{
+    background-color: black;
+}
+
+/*--------------------skills----------------------*/
+.skills{
+    padding: 70px 40px;
+}
+.skill-title{
+    font-size: 40px;
+    text-shadow: 3px 3px black;
+    color: yellow;
+}
+.skill-tab-title{
+    display: flex;
+    margin-right: 4px;
+}
+.skill-tab-links
+{
+    padding: 0px 0;
+    margin-right: 55px;
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+    display: inline-flex;
+}
+.skill-tab-links::after
+{
+    content: '';
+    width: 0;
+    height: 4px;
+    background: yellow;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.skill-tab-links.skill-active-link::after
+{
+    width: 100%;
+}
+
+.skill-tab-contents.skill-active-tab{
+    display: block;
+}
+
+.skill-tab-contents{
+    width: 500px;
+    margin: 10px 20px;
+    list-style: none;
+    color: yellow;
+    padding: 20px;
+    background-color: black;
+    box-shadow: 0 14px 28px yellow;
+    display: none;
+}
+
+.skill-tab-contents li{
+    margin: 20px 0;
+    padding: 10px;
+}
+
+#front-end{
+    height: 400px;
+    line-height: 20px;
+}
+.bar{
+    background: rgb(233, 233, 181);
+    display: block;
+    height: 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px black;
+}
+
+.bar:hover
+{
+    box-shadow: 0 12px 24px white;
+}
+
+.bar span{
+    height: 20px;
+    float: left;
+    background: yellow
+}
+
+.html
+{
+    width: 90%;
+}
+.css
+{
+    width: 90%;
+    
+}
+.javascript
+{
+    width: 60%;
+    
+}
+.angular
+{
+    width: 50%;
+    
+}
+.react
+{
+    width: 40%;
+    
+}
+
+.java
+{
+    width: 80%;
+    
+}
+.spring-boot
+{
+    width: 75%;
+    
+}
+.mvc
+{
+    width: 80%;
+}
+.maven
+{
+    width: 90%;
+}
+.c
+{
+    width: 50%;
+    
+}
+.python
+{
+    width: 20%;
+    
+}
+.sql{
+    width: 95%;
+}
+.mongo{
+    width: 40%;
+}
+.snowflake{
+    width: 90%;
+}
+.jenkins
+{
+    width: 80%;
+}
+.git
+{
+    width: 90%;
+}
+.junit
+{
+    width: 85%;
+}
+.browserstack
+{
+    width: 90%;
+}
+.scrum
+{
+    width: 95%;
+}
+.agile
+{
+    width: 90%;
+}
+.kibana
+{
+    width: 80%;
+}
+.aws
+{
+    width: 85%;
+}
+.datadog
+{
+    width: 60%;
+}
+.communication
+{
+    width: 80%;
+}
+.leadership
+{
+    width: 88%;
+}
+.timemanagement
+{
+    width: 85%;
+}
+.fastlearning
+{
+    width: 90%;
+}
+.collaborative
+{
+    width: 80%;
+}
+.analytical
+{
+    width: 85%;
+}
+/*--------------------Skill-----------------*/
+.projects{
+    padding: 70px 40px;
+}
+.project-title{
+    font-size: 40px;
+    text-shadow: 3px 3px black;
+    color: yellow;
+}
+.project-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+    grid-gap: 20px;
+    margin-top: 20px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 80%;
+    border-radius: 25px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer{
+    width: 80%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.5), #ebe70c);
+    position: absolute;
+    border-radius: 10px;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 20px;
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: long 0.5s;
+
+}
+.layer h3{
+    font-weight: 5000;
+    margin-bottom: 24px;
+    color: white;
+}
+.layer p
+{
+    font-size: 18px;
+    color: white;
+}
+.layer a
+{
+    margin-top: 20px;
+    color: rgb(47, 228, 62);
+    background: #e9e926;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    long{
+        height: 100%;
+    }
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid white;
+    padding: 12px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: black;
+    background-color: yellow;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+}
+
+/*------------------Contact-----------------*/
+.contact-left{
+    flex-basis: 35%;
+    margin-left: 10%;
+}
+.contact-right{
+    flex-basis: 60%;
+    margin-left: 40%;
+    margin-top: -190px;
+}
+
+.contact-left p
+{
+    margin-top: 20px;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.contact-left p i
+{
+    margin-right: 12px;
+    font-size: 20px;
+}
+
+.social-icons
+{
+    margin-top: 30px;
+}
+
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 12px;
+    display: inline-block;
+}
+
+.contact-right form{
+    width: 80%;
+    display: block;
+}
+form input, form textarea
+{
+    width: 100%;
+    border: 0;
+    outline: none;
+    padding: 15px;
+    margin: 15px 0;
+    color: #000;
+    font-size: 20px;
+    border-radius: 6px;
+}
+
+form button{
+    padding: 14px 40px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: yellow;
+    color: #000;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.copyright{
+    margin-top: 3%;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #deee05;
+
+}
+#msg{
+    color: #000;
+    display: block;
+    margin-top: 10px;
+}
+
+/*--------------------responsive----------------------*/
+nav .fa-solid{
+    display: none;
+}
+ 
+@media only screen and (max-width: 991px){
+
+    section{
+        padding: 5rem 3% 20rem;
+        display: block;
+    }
+    .info{
+        text-align: center;
+        padding: 60% 10%;
+        display: block;
+
+    }
+    .hero-img{
+        display: block;
+        width: 60%;
+        margin-top: -170%;
+        margin-left: -20%;
+        position: absolute;
+    }
+    .animated-text{
+        display: block;
+    }
+    .animated-text ul{
+        display: block;
+        
+        
+    }
+}
+
+@media (max-width: 600px) {
+    .logo {
+        width: 80px;
+    }
+
+    .navbar {
+        font-size: small;
+    }
+    
+    nav .fa-solid{
+        display: block;
+        font-size: 20px;
+    }
+
+    nav ul{
+        position: fixed;
+        background: #000;
+        top: 0;
+        width: 100px;
+        height: 100vh;
+        padding-top: 50px;
+        margin-right: -20px;
+        right: -125px;
+        z-index: 2;
+        transform: translateX(0px);
+    }
+
+    nav ul li {
+        display: block;
+        line-height: 20px;
+        margin: 20px 10px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    .info-content {
+        margin-left: 5%;
+        margin-top: 10%;
+        font-size: 20px;
+    }
+
+    .animated-text li {
+        font-size: 20px;
+    }
+
+    .cv-button {
+        margin-left: -25%;
+        margin-bottom: -5%;
+        margin-top: 5%;
+    }
+
+    .hero-img {
+        width: 60%;
+        margin-top: -150%;
+        margin-left: -30%;
+    }
+
+    /* Responsive styles for the About section */
+    .about-section {
+        padding: 50px 10px;
+    }
+
+    .about-col-1 img {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .about-col-2 {
+        margin-top: 0;
+        margin-left: 0;
+        font-size: 16px;
+    }
+
+    .tab-links {
+        margin-right: 20px;
+        font-size: 16px;
+    }
+
+    .tab-contents ul li {
+        font-size: 14px;
+    }
+
+    /* Responsive styles for the Skills section */
+    .skills {
+        padding: 30px 10px 20px;
+    }
+
+    .skill-title {
+        font-size: 30px;
+    }
+
+    .skill-tab-links {
+        margin-right: 20px;
+        font-size: 16px;
+    }
+
+    .bar {
+        height: 8px;
+    }
+
+    .bar span {
+        height: 16px;
+    }
+    .skill-tab-contents{
+        width: 70%;
+    }
+
+    /* Responsive styles for the Projects section */
+    .project-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .work img {
+        width: 100%;
+    }
+
+    .layer {
+        font-size: 12px;
+    }
+
+    .btn {
+        margin: 30px auto;
+    }
+
+    /* Responsive styles for the Contact section */
+    .contact-left {
+        flex-basis: 50%;
+        margin-left: 0;
+    }
+
+    .contact-right {
+        flex-basis: 100%;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    .contact-left p {
+        font-size: 16px;
+    }
+
+    .contact-left p i {
+        font-size: 16px;
+    }
+
+    .social-icons {
+        margin-top: 20px;
+    }
+
+    .social-icons a {
+        font-size: 24px;
+        margin-right: 10px;
+    }
+}
